@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 14px;
+}
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+  background-color: #eee;
+}
+#root {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid #333;
+  box-shadow: 0px 0px 15px gray;
+}
+
+.Header,
+.footer {
+  width: 100%;
+  padding: 1rem;
+  background-color: #66d8f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Header h1 {
+  font-size: 1.5rem;
+}
+.Header svg {
+  font-size: 2rem;
+}
+.footer {
+  padding: 0.75rem;
+  display: grid;
+  place-content: center;
+}
+
+.Nav {
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.searchForm {
+  width: 80%;
+  padding: 1rem 0 0 0.75rem;
+}
+
+.searchForm input[type="text"] {
+  font-family: sans-serif;
+  width: 100%;
+  min-height: 48px;
+  font-size: 1.5rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  outline: none;
+}
+.searchForm label {
+  position: absolute;
+  left: -99999999px;
+}
+
+.Nav ul {
+  color: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  list-style: none;
+}
+.Nav li {
+  padding: 1rem;
+}
+.Nav li:hover,
+.Nav li:focus {
+  padding: 1rem;
+}
+
+.Nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.Nav li:hover,
+.Nav li:focus,
+.Nav li:hover a,
+.Nav li:focus a {
+  background-color: #eee;
+  color: #333;
+}
+
+.Home,
+.NewPost,
+.PostPage,
+.About,
+.Missing {
+  width: 100%;
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.post {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid lightgrey;
+}
+
+.Home .post  a {
+  text-decoration: none;
+}
+
+.Home .post a,
+.Home .post a:visited {
+  color: #000;
+}
+.post:first-child {
+  margin-top: 0;
+}
+.postDate {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+.postBody {
+  margin: 1rem 0;
+}
+.newPostForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.newPostForm label {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+}
+.newPostForm input[type="text"],
+.newPostForm textarea {
+  width: 100%;
+  min-height: 48px;
+  font-size: 1.5rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin-right: 0.25rem;
+  outline: none;
+}
+.newPostForm input[type="text"]:focus:hover,
+.newPostForm textarea:focus:hover {
+   border-color: blue;
+}
+.newPostForm textarea {
+  height: 130px;
+}
+
+.newPostForm button {
+  margin-top: 1rem;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: blue;
+  color: #eee;
+  border: none;
+}
+.newPostForm button:focus,
+.newPostForm button:hover{
+ color:#66d8f5; 
+}
+
+.Missing h2,
+.PostPage h2,
+.Missing p,
+.PostPage p {
+  margin-bottom: 1rem;
+}
+.PostPage button {
+  height: 48px;
+  min-width: 48px;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid blue;
+}
+.editbutton{
+  background-color: green;
+  margin-right: 1rem;
+}
+.deletebutton{
+  background-color: red;
+}
+
+
+/* @media only screen and (min-width: 610px){
+  html{
+    font-size: 14px;
+  }
+  .Header h1{
+    font-size: 2rem;
+  }
+  .Nav{
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Nav ul{
+    text-align:  right;
+  }
+
+} */
